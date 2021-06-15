@@ -1,4 +1,4 @@
-import { Route, Link, Switch } from 'react-router-dom'
+import { Route, NavLink, Switch } from 'react-router-dom'
 import './App.css';
 import Home from './components/Home'
 import Contact from './components/Contact'
@@ -12,6 +12,9 @@ function App() {
   }
   return (
     <div className="App">
+      <NavLink to='/'><button>Home</button></NavLink>
+      <NavLink to='/projects'><button>Projects</button></NavLink>
+      <NavLink id='about' to='/contact'><button>Contact Me</button></NavLink>
       <Switch>
         <Route path='/projects'>
           <Projects />
@@ -23,11 +26,6 @@ function App() {
           <Home />
         </Route>
       </Switch>
-
-
-    <Link to='/'>Home</Link>
-    <Link to='/projects'>Projects</Link>
-    <Link id='about' to='/contact'>Contact Me</Link>
     </div>
   );
 }
