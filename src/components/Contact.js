@@ -1,5 +1,6 @@
 import '../App.less'
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const intialFormValues = {
     comments: '',
@@ -15,6 +16,8 @@ const intialFormValues = {
      const [ formValues, setFormValues ] = useState(intialFormValues)
     return (
         <div>
+            <Link to='/'><button>Home</button></Link>
+            <Link to ='/projects'><button>Projecets</button></Link>
             <form>
                 <label> Questions? Comments? 
                 <input type='text' name='comments' onChange={onChange} value={formValues.comments}></input>
