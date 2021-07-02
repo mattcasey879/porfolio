@@ -16,15 +16,18 @@ const intialFormValues = {
      const [ formValues, setFormValues ] = useState(intialFormValues)
     return (
         <div>
-            <Link to='/'><button>Home</button></Link>
-            <Link to ='/projects'><button>Projecets</button></Link>
+            <div className='nav-links'>
+                <Link className='navs' to='/'>Home</Link>
+                <Link className='navs' to ='/projects'>Projects</Link>
+            </div>
             <form>
-                <label> Questions? Comments? 
-                <input type='text' name='comments' onChange={onChange} value={formValues.comments}></input>
+                <label> <h3>Questions? Comments? </h3>
+                <textarea id='cmt-box' type='text' name='comments' onChange={onChange} value={formValues.comments}></textarea>
                 </label>
                 <label> Please Leave me your email:
                     <input type='email' name='email' onChange={onChange} value={formValues.email}></input>
                 </label>
+                <button id='submit-btn'>Submit</button>
             </form>
         </div>
     )

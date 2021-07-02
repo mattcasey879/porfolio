@@ -20,6 +20,9 @@ function App() {
           <Home />
         </Route>
       </Switch>
+      <footer>
+        <p>matthewcasey</p>
+      </footer>
     </div>
   );
 }
